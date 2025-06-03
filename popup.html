@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>抖音视频数据采集</title>
+  <style>
+    body {
+      font-family: "Roboto", "Arial", sans-serif;
+      background: #f1f3f4;
+      color: #202124;
+      margin: 0;
+      padding: 20px;
+      min-width: 300px;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    #fieldsContainer {
+      background: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(60,64,67,.3);
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(60,64,67,.3);
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #1669c1;
+    }
+
+    #progressBox {
+      background: #fff;
+      color: #202124;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      min-width: 180px;
+      line-height: 1.4;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: none; /* 默认隐藏 */
+    }
+  </style>
+</head>
+
+<body>
+  <h4>选择导出的字段</h4>
+  <div id="fieldsContainer">
+    <label><input type="checkbox" name="field" value="video_id" checked> video_id</label>
+    <label><input type="checkbox" name="field" value="userName" checked> userName</label>
+    <label><input type="checkbox" name="field" value="title" checked> title</label>
+    <label><input type="checkbox" name="field" value="video_duration" checked> video_duration</label>
+    <label><input type="checkbox" name="field" value="comment_count" checked> comment_count</label>
+    <label><input type="checkbox" name="field" value="digg_count" checked> digg_count</label>
+    <label><input type="checkbox" name="field" value="play_count" checked> play_count</label>
+    <label><input type="checkbox" name="field" value="share_count" checked> share_count</label>
+    <label><input type="checkbox" name="field" value="collect_count" checked> collect_count</label>
+    <label><input type="checkbox" name="field" value="createTime" checked> createTime</label>
+    <label><input type="checkbox" name="field" value="video_url" checked> video_url</label>
+  </div>
+
+  <button id="startCollect">开始爬取</button>  
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
